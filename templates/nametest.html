@@ -1,12 +1,11 @@
 {%extends "base.html" %}
 {%block namecontent%}
-<p class="am-kai" style="color:#FF88C2"><b>每个星座的不同性格，聚在一起，必然会产生不同的化学反应。你的配对会如何？让表白的爱情配对帮助你们分析一下。快来选择你和TA的星座测一下吧！（不可以此做为恋爱的依据哦）</b></p>
+<p class="am-kai" style="color:#FF88C2"><b>姓名究竟赋予了我们一生什么样的命运，两个人的姓名又会擦出什么样的火花呢？在下方输入配对双方的姓名，即可测算出两人的关系哦。准得有点儿邪哦，快来试试吧。（不可以此做为恋爱的依据哦）</b></p>
 <form action="/name" method="post">
 <div class="am-form-group">
       <label for="man-name" style="color:#FF88C2">男</label>
       <input type="text" class="" id="man-name" name="man" placeholder="输入姓名（汉字）">
     </div>
-
     <div class="am-form-group">
       <label for="woman-name" style="color:#FF88C2">女</label>
       <input type="text" class="" id="woman-name" name="woman"placeholder="输入姓名（汉字）">
@@ -16,6 +15,7 @@
     </div>
     </form>
 {%if list.__len__()!=0%}
-<h3 style="color:#FF88C2"><b>{{list[0]}}</b></h3>
+<h2 style="color:#FF88C2">{{man}}&&{{woman}}</h2>
+<h3 style="color:#FF88C2"><b>{{list[0]}}{{list[1]}}</b></h3>
 {%endif%}
 {%endblock%}

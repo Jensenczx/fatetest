@@ -1,0 +1,49 @@
+{%extends "base.html"%}
+{%block xzcontent%}
+<p class="am-kai" style="color:#FF88C2"><b>每个星座的不同性格，聚在一起，必然会产生不同的化学反应。你的配对会如何？让表白的爱情配对帮助你们分析一下。快来选择你和TA的星座测一下吧！（不可以此做为恋爱的依据哦）</b></p>
+<form action="/xz" method="post">
+    <div class="am-g" >
+<div class="am-form-group am-u-sm-5">
+      <select id="doc-select-1" name="man">
+<option value="1">白羊男</option>
+                                        <option value="2">金牛男</option>
+                                        <option value="3">双子男</option>
+                                        <option value="4">巨蟹男</option>
+                                        <option value="5">狮子男</option>
+                                        <option value="6">处女男</option>
+                                        <option value="7">天秤男</option>
+                                        <option value="8">天蝎男</option>
+                                        <option value="9">射手男</option>
+                                        <option value="10">摩羯男</option>
+                                        <option value="11">水瓶男</option>
+                                        <option value="12">双鱼男</option>
+      </select>
+      <span class="am-form-caret"></span>
+    </div>
+    <div class="am-form-group am-u-sm-5">
+      <select id="doc-select-2" name="woman">
+        <option value="1">白羊女</option>
+                                        <option value="2">金牛女</option>
+                                        <option value="3">双子女</option>
+                                        <option value="4">巨蟹女</option>
+                                        <option value="5">狮子女</option>
+                                        <option value="6">处女女</option>
+                                        <option value="7">天秤女</option>
+                                        <option value="8">天蝎女</option>
+                                        <option value="9">射手女</option>
+                                        <option value="10">摩羯女</option>
+                                        <option value="11">水瓶女</option>
+                                        <option value="12">双鱼女</option>
+      </select>
+      <span clasds="am-form-caret"></span>
+    </div>
+  </div>
+    <input type="submit" value="缘分测试" class="am-btn am-btn-default am-round" style="background-color:#FF88C2;color:#FFFFFF">
+</form>
+{%if list.__len__()!=0%}
+<h3 style="color:#FF88C2"><b>{{list[0]}}</b></h3>
+<p class="am-kai" style="color:#FF88C2">{{list[1]}}{{list[2]}}</p>
+<p class="am-kai" style="color:#FF88C2">{{list[3]}}{{list[4]}}</p>
+<p class="am-kai" style="color:#FF88C2">{{list[5]}}{{list[6]}}</p>
+{%endif%}
+{%endblock%}

@@ -44,4 +44,5 @@ class xzSrcub():
             finally:
                 list = parser.infolist[:-1]
                 parser.close()
+                print list
                 return list

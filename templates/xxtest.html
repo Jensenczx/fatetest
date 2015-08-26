@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+{%block xxcontent%}
+<p class="am-kai" style="color:#FF88C2"><b>不同的血型不同的性格，聚在一起，必然会产生不同的化学反应。你与他（她）的配对会如何？会是只羡鸳鸯不羡仙，还是欢迎怨家，还是如何的一对组合呢？让第一星座的爱情配对帮助你们分析一下。不可以此做为恋爱的依据哦，那样也许会错失一生的幸福。</b></p>
+<form action="/xx" method="post">
+    <div class="am-g" >
+<div class="am-form-group am-u-sm-5">
+    <label for="doc-select-1" style="color:#FF88C2">男</label>
+      <select id="doc-select-1" name="man">
+          <option value="1">A</option>
+          <option value="2">B</option>
+          <option value="3">O</option>
+          <option value="4">AB</option>
+      </select>
+      <span class="am-form-caret"></span>
+    </div>
+    <div class="am-form-group am-u-sm-5">
+        <label for="doc-select-2" style="color:#FF88C2">女</label>
+      <select id="doc-select-2" name="woman">
+          <option value="1">A</option>
+          <option value="2">B</option>
+          <option value="3">O</option>
+          <option value="4">AB</option>
+      </select>
+      <span class="am-form-caret"></span>
+    </div>
+  </div>
+    <input type="submit" value="缘分测试" class="am-btn am-btn-default am-round" style="background-color:#FF88C2;color:#FFFFFF">
+</form>
+{%if list.__len__()!=0%}
+<h3 style="color:#FF88C2"><b>{{list[0]}}</b></h3>
+<p class="am-kai" style="color:#FF88C2">{{list[1]}}{{list[2]}}{{list[3]}}{{list[4]}}</p>
+{%endif%}
+{%endblock%}

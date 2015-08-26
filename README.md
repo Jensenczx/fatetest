@@ -1,2 +1,2 @@
 # fatetest
-用python flask写的一个用来做缘分测试匹配的一个初学练手小项目
+用python flask写的一个用来做缘分测试匹配的一个初学练手小项目,血型配对，姓名配对和星座配对，前端使用的amazeui的web组件

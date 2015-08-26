@@ -44,4 +44,5 @@ class namePaire:
             finally:
                 list = parser.infolist[1:-1]
                 parser.close()
+                print list
                 return list
